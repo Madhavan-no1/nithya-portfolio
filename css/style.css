@@ -66,7 +66,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- Header ---------- */
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 50;
-  transition: background .4s var(--ease), box-shadow .4s var(--ease), transform .4s var(--ease);
+  transition: background .4s var(--ease), box-shadow .4s var(--ease);
 }
 .site-header.is-solid {
   background: rgba(245, 241, 232, .86);
@@ -259,7 +259,7 @@ main { overflow-x: clip; }
 }
 .pub-filter button span { font: 400 11px var(--mono); margin-left: 4px; opacity: .7; }
 .pub-filter button:hover { color: var(--ink); }
-.pub-filter button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+.pub-filter button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
 
 .pubs { border-top: 1px solid var(--ink); }
 .pub {

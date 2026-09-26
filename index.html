@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,12 @@
   <meta name="author" content="Dr. Nithyakalyani Krishnan">
   <meta property="og:title" content="Dr. Nithyakalyani Krishnan — Biomedical Engineering">
   <meta property="og:description" content="Infrared thermal imaging and AI for the early diagnosis of chronic venous insufficiency.">
-  <meta property="og:image" content="assets/portrait.jpg">
+  <link rel="canonical" href="https://madhavan-no1.github.io/nithya-portfolio/">
+  <meta property="og:url" content="https://madhavan-no1.github.io/nithya-portfolio/">
+  <meta property="og:image" content="https://madhavan-no1.github.io/nithya-portfolio/assets/portrait.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+  <meta name="twitter:card" content="summary">
   <meta property="og:type" content="profile">
   <meta name="theme-color" content="#0e2623">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -26,7 +31,8 @@
     "honorificPrefix": "Dr.",
     "jobTitle": "Assistant Professor",
     "email": "mailto:nithyakk1@srmist.edu.in",
-    "image": "assets/portrait.jpg",
+    "image": "https://madhavan-no1.github.io/nithya-portfolio/assets/portrait.jpg",
+    "url": "https://madhavan-no1.github.io/nithya-portfolio/",
     "worksFor": {
       "@type": "CollegeOrUniversity",
       "name": "SRM Institute of Science and Technology",
@@ -44,11 +50,11 @@
   }
   </script>
 </head>
-<body>
+<body id="top">
 
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header" id="top">
+<header class="site-header">
   <div class="wrap header-inner">
     <a href="#top" class="brand" aria-label="Dr. Nithyakalyani Krishnan — home">
       <span class="brand-mark" aria-hidden="true">NK</span>
@@ -224,10 +230,10 @@
         </p>
       </header>
 
-      <div class="pub-filter reveal" role="tablist" aria-label="Filter publications">
-        <button role="tab" aria-selected="true" data-filter="all">All <span>7</span></button>
-        <button role="tab" aria-selected="false" data-filter="journal">Journal <span>4</span></button>
-        <button role="tab" aria-selected="false" data-filter="chapter">Book chapter <span>3</span></button>
+      <div class="pub-filter reveal" role="group" aria-label="Filter publications">
+        <button type="button" aria-pressed="true" data-filter="all">All <span>7</span></button>
+        <button type="button" aria-pressed="false" data-filter="journal">Journal <span>4</span></button>
+        <button type="button" aria-pressed="false" data-filter="chapter">Book chapter <span>3</span></button>
       </div>
 
       <ol class="pubs">
@@ -432,11 +438,11 @@
 
         <article class="award reveal">
           <div class="award-seal" aria-hidden="true">
-            <svg viewBox="0 0 120 120">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
               <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="1"/>
               <circle cx="60" cy="60" r="34" fill="none" stroke="currentColor" stroke-width="1"/>
-              <text font-size="8.4" letter-spacing="2.6" fill="currentColor"><textPath href="#circ">APJ ABDUL KALAM · RESEARCH AWARD · 2025 ·</textPath></text>
+              <text font-size="8.4" letter-spacing="2.6" fill="currentColor"><textPath href="#circ" xlink:href="#circ">APJ ABDUL KALAM · RESEARCH AWARD · 2025 ·</textPath></text>
               <text x="60" y="67" text-anchor="middle" font-size="20" font-family="Fraunces, serif" font-style="italic" fill="currentColor">2025</text>
             </svg>
           </div>
@@ -591,7 +597,7 @@
   <div class="wrap footer-inner">
     <span>© <span id="year">2026</span> Dr. Nithyakalyani Krishnan</span>
     <span class="thermal-rule" aria-hidden="true"></span>
-    <a href="#top">Back to top ↑</a>
+    <a href="#top" class="to-top">Back to top ↑</a>
   </div>
 </footer>
 

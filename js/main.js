@@ -81,6 +81,24 @@
     });
   }));
 
+  /* Activity filter: hide non-matching entries, and whole months that end up empty */
+  const actBtns = document.querySelectorAll('[data-act]');
+  const months = document.querySelectorAll('.act-month');
+  const filterActivity = cat => {
+    actBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.act === cat)));
+    months.forEach(m => {
+      let shown = 0;
+      m.querySelectorAll('.act').forEach(it => {
+        it.hidden = !(cat === 'all' || it.dataset.cat === cat);
+        if (!it.hidden) { shown++; it.classList.add('is-in'); }
+      });
+      m.hidden = shown === 0;
+      m.querySelector('.act-when').classList.add('is-in');
+    });
+  };
+  actBtns.forEach(b => b.addEventListener('click', () => filterActivity(b.dataset.act)));
+  document.querySelectorAll('[data-jump-filter]').forEach(a => a.addEventListener('click', () => filterActivity(a.dataset.jumpFilter)));
+
   /* Certificate viewer */
   const lb = document.getElementById('lightbox');
   const lbImg = lb.querySelector('img');

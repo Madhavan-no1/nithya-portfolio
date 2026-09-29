@@ -81,5 +81,28 @@
     });
   }));
 
+  /* Certificate viewer */
+  const lb = document.getElementById('lightbox');
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('figcaption');
+  let lbOpener = null;
+  const closeLb = () => lb.open && lb.close();
+  document.querySelectorAll('[data-cert]').forEach(btn => btn.addEventListener('click', () => {
+    lbOpener = btn;
+    lbImg.src = `assets/certificates/${btn.dataset.cert}.jpg`;
+    lbImg.alt = btn.dataset.caption;
+    lbCap.textContent = btn.dataset.caption;
+    lb.showModal();
+    document.body.classList.add('lb-open');
+  }));
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  // Clicking the backdrop (the dialog itself, outside the figure) closes it
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  lb.addEventListener('close', () => {
+    document.body.classList.remove('lb-open');
+    lbImg.removeAttribute('src');
+    if (lbOpener) lbOpener.focus();
+  });
+
   document.getElementById('year').textContent = new Date().getFullYear();
 })();

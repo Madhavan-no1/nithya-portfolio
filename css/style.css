@@ -329,7 +329,7 @@ main { overflow-x: clip; }
 .award-seal { position: absolute; right: -18px; top: -18px; width: 150px; height: 150px; color: var(--gold-2); opacity: .9; animation: spin 40s linear infinite; }
 .award-seal text { font-family: var(--mono); }
 .award.award-alt { background: var(--emerald) !important; }
-.pa-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+.pa-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
 .pa-row article { background: var(--card); border: 1px solid var(--line-2); border-radius: 4px; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; }
 .pa-row .cert-link { margin-top: auto; padding-top: 0; align-self: flex-start; }
 .pa-row .grant p:not(.mini-label) { margin-bottom: 20px; }
